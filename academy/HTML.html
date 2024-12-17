@@ -1,0 +1,103 @@
+""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-container, .employee-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .info, .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Employee Details</h1>
+
+    <!-- Form for inputting employee data -->
+    <div class="form-container">
+        <form method="POST">
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="employee_id">Employee ID:</label>
+                <input type="text" id="employee_id" name="employee_id" required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+   
+    @app.route('/', methods=['GET', 'POST'])
+    def employee_form():
+        employee = None
+    
+        if request.method == 'POST':
+            # Get data from the form
+            first_name = request.form.get('first_name')
+            last_name = request.form.get('last_name')
+            gender = request.form.get('gender')
+            employee_id = request.form.get('employee_id')
+            phone_number = request.form.get('phone_number')
+    
+            # Store the data in a dictionary to pass to the template
+            employee = {
+                'first_name': first_name,
+                'last_name': last_name,
+                'gender': gender,
+                'employee_id': employee_id,
+                'phone_number': phone_number
+            }
+    
+        return render_template_string(html_template, employee=employee)
+    
+    if __name__ == '__main__':
+        app.run(debug=True)a
+
