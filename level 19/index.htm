@@ -1,24 +1,204 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GOA Oriental Academy - ის სასწავლო ცენტრი ტექნოლოგიების სწავლებისათვის.">
+    <title>GOA Oriental Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
 
-p {
-  color: red;
-  font-size: 22px;
-  font-weight: 800;
-  text-align: right;
-  border: 5px dashed green;
-}
+        header {
+            background-color: #006400;
+            padding: 20px;
+            text-align: center;
+        }
 
+        header h1 {
+            margin: 0;
+            color: #fff;
+        }
 
-h1 {
-  color: blue;
-  font-size: 50px;
-  text-align: center;
-  border: 10px solid green;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 0;
+        }
 
+        nav ul li {
+            margin: 0 15px;
+        }
 
-button {
-  background-color: lightblue;
-  font-size: 30px;
-  font-weight: 900;
-  border: 2px double black;
-}
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #006400;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #006400;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #004d00;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .course-card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            text-align: left;
+        }
+
+        .course-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .course-card p {
+            font-size: 14px;
+        }
+
+        .info-section {
+            margin-top: 40px;
+            background-color: #111;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .info-section h3 {
+            color: #00ff00;
+        }
+
+        .info-section p {
+            color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>GOA ორიანტალური აკადემია</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">ჩვენს შესახებ</a></li>
+                <li><a href="#courses">კურსები</a></li>
+                <li><a href="#coding">პროგრამირების სწავლა</a></li>
+                <li><a href="#contact">კონტაქტი</a></li>
+                <li><a href="about.html">მეტი ინფორმაციისთვის</a></li>
+                <li><a href="courses.html">ყველა კურსი</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>GOA ორიანტალური აკადემიის შესახებ</h2>
+        <p>მოგესალმებით GOA ორიანტალურ აკადემიაში! ჩვენ ვასწავლით პროგრამირების უნარებს, რათა გავაძლიეროთ სტუდენტები ტექნოლოგიური სამყაროსთვის. გაიგეთ მეტი ჩვენი კურსებისა და რესურსების შესახებ და აიმაღლეთ თქვენი ცოდნა.</p>
+        <a href="about.html" class="button">მეტის გაგება</a>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <h2>ჩვენი კურსები</h2>
+        <div class="course-list">
+            <div class="course-card">
+                <h3>HTML & CSS-ის საფუძვლები</h3>
+                <p>ისწავლეთ ვებგვერდების დამზადება მარტივად და ნაბიჯ-ნაბიჯ.</p>
+            </div>
+            <div class="course-card">
+                <h3>JavaScript-ის საფუძვლები</h3>
+                <p>დაამზადეთ ინტერაქტიული ვებაპლიკაციები.</p>
+            </div>
+            <div class="course-card">
+                <h3>პითონის პროგრამირება</h3>
+                <p>ისწავლეთ პროგრამირების ყველაზე პოპულარული ენა.</p>
+            </div>
+            <div class="course-card">
+                <h3>Full-Stack ვებდეველოპმენტი</h3>
+                <p>გაიცანით სრულფასოვანი ვებაპლიკაციების დამზადების პროცესი.</p>
+            </div>
+        </div>
+        <a href="courses.html" class="button">ყველა კურსის ნახვა</a>
+    </section>
+
+    <!-- Coding Information Section -->
+    <section id="coding" class="info-section">
+        <h2>პროგრამირების შესახებ</h2>
+        <div>
+            <h3>რატომ ვისწავლოთ პროგრამირება?</h3>
+            <p>პროგრამირება ტექნოლოგიური განვითარების ძირითადი ნაწილია. ის საშუალებას გაძლევთ შექმნათ ინოვაციური აპლიკაციები, გაუმჯობესოთ მუშაობის პროცესები და გაზარდოთ თქვენი კარიერული შესაძლებლობები.</p>
+        </div>
+        <div>
+            <h3>პირველი ნაბიჯები</h3>
+            <p>დაიწყეთ მარტივი პროგრამირების ენებით, როგორიცაა HTML, CSS და Python. ამ ცოდნის დახმარებით შეძლებთ თქვენი პროექტების დამზადებას და უკეთ გაიცნობთ პროგრამირების საფუძვლებს.</p>
+        </div>
+        <div>
+            <h3>რესურსები</h3>
+            <p>ჩვენი კურსები და მასალები დაგეხმარებათ სწრაფად და ეფექტურად სწავლაში. იხილეთ მეტი ჩვენს ვებსაიტზე!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>დაგვიკავშირდით</h2>
+        <p>მოხარული ვიქნებით, თუ დაგვიკავშირდებით! გვიპოვეთ სოციალურ ქსელებზე ან გამოგვიგზავნეთ შეტყობინება.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/nika11keshelava" target="_blank">Facebook</a>
+            <a href="https://www.youtube.com/@Goal_Oriented_Academy__GOA" target="_blank">YouTube</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 GOA ორიანტალური აკადემია. ყველა უფლება დაცულია.</p>
+    </footer>
+</body>
+</html>
